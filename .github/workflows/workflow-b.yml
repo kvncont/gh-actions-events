@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Step 1
         run: |
+          echo "Ref: ${{ github.ref }}"
+          echo "Ref: ${{ github.event.ref }}"
+
+      - name: Step 2
+        run: |
           echo "Hello from Workflow B"
           echo "Workflow ID: ${{ github.event.workflow_run.workflow_id }}"
           echo "Branch: ${{ github.event.workflow_run.head_branch }}"
