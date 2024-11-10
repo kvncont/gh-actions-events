@@ -13,3 +13,6 @@ jobs:
       - name: Step 1
         run: |
           echo "Hello from Workflow B"
+          echo "Workflow ID: ${{ github.event.workflow_run.workflow_id }}"
+          echo "Head Branch: ${{ github.event.head_branch }}"
+          
