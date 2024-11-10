@@ -14,5 +14,6 @@ jobs:
         run: |
           echo "Hello from Workflow B"
           echo "Workflow ID: ${{ github.event.workflow_run.workflow_id }}"
-          echo "Head Branch: ${{ github.event.head_branch }}"
+          echo "Branch: ${{ github.event.workflow_run.head_branch }}"
+          echo "Commit ID: ${{ github.event.workflow_run.head_commit.id }}"
           
